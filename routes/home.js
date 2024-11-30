@@ -14,4 +14,9 @@ module.exports = function (app) {
     app.get('/about', function (req, res) {
         res.render('about', { title: 'About Me.  ' })
     });
+
+    app.get('/headers', function (req, res) {
+        console.log('Request Headers:', req.headers); // Logs all headers to the console        
+        res.send("logged");
+    });
 }
